@@ -4,7 +4,7 @@ jobs:
     machine: true
     steps:
       - add_ssh_keys:
-          fingerprints:
+          fingerprnts:
             - "d8:b2:08:9a:95:9d:c6:ec:7f:4c:a6:a9:f6:6d:99:0e"
       - checkout
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
