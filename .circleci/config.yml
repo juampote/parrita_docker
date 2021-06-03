@@ -10,4 +10,4 @@ jobs:
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run: docker build -t jparrauguina/parrita_docker:$CIRCLE_SHA1 .
       - run: docker push jparrauguina/parrita_docker:$CIRCLE_SHA1
-      - run: ssh -o StrictHostkeyChecking=no root@35.242.138.166 "/bin/bash /root/docker/deploy.sh '$CIRCLE_SHA1'"
+      - run: ssh -o StrictHostkeyChecking=no root@35.242.138.166 "/bin/bash /root/docker/deploy.sh \"$CIRCLE_SHA1\""
